@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LaboratorioProgramacionUno.Dominio;
+using LaboratorioProgramacionUno.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +36,51 @@ namespace LaboratorioProgramacionUno.Vista
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
+            Login entrarUs = new Login();
+            ClsLogin logica = new ClsLogin();
+           
+                entrarUs.User = TxtUsuario.Text;
+                entrarUs.Pass = TxtContraseña.Text;
 
+                int R = logica.LogUser(entrarUs);
+
+                if (R == 1)
+                {
+                    MessageBox.Show("Acceso Consedido");
+                    FrmOperaciones frm = new FrmOperaciones();
+                    frm.Show();
+                    this.Hide();
+                }
+            else
+            {
+                MessageBox.Show("Usuario o Contraseña incorrecta");
+            }
+              
+            
+            
+        }
+
+        private void BtnEntrarAd_Click(object sender, EventArgs e)
+        {
+            Login entrarUs = new Login();
+            ClsLogin logica = new ClsLogin();
+
+            entrarUs.User = TxtUsuario.Text;
+            entrarUs.Pass = TxtContraseña.Text;
+
+            int R = logica.LogAdmin(entrarUs);
+
+            if (R == 1)
+            {
+                MessageBox.Show("Acceso Consedido");
+                FrmOperaciones frm = new FrmOperaciones();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Contraseña incorrecta");
+            }
         }
     }
 }

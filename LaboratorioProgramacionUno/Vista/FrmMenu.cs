@@ -21,6 +21,7 @@ namespace LaboratorioProgramacionUno
         private void BtnUsuario_Click(object sender, EventArgs e)
         {
             FrmLogin frm = new FrmLogin();
+            frm.BtnEntrarAd.Enabled = false;
             frm.Show();
             this.Hide();
         }
@@ -38,6 +39,14 @@ namespace LaboratorioProgramacionUno
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnAdmin_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.BtnEntrarUs.Enabled = false;
+            frm.Show();
+            this.Hide();
         }
     }
 }

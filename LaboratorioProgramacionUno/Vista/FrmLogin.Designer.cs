@@ -32,9 +32,10 @@ namespace LaboratorioProgramacionUno.Vista
             this.LblUsuario = new System.Windows.Forms.Label();
             this.LblPass = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnEntrar = new System.Windows.Forms.Button();
+            this.BtnEntrarUs = new System.Windows.Forms.Button();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
+            this.BtnEntrarAd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@ namespace LaboratorioProgramacionUno.Vista
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BtnEntrar);
+            this.panel1.Controls.Add(this.BtnEntrarAd);
+            this.panel1.Controls.Add(this.BtnEntrarUs);
             this.panel1.Controls.Add(this.TxtContraseña);
             this.panel1.Controls.Add(this.TxtUsuario);
             this.panel1.Controls.Add(this.LblUsuario);
@@ -78,19 +80,19 @@ namespace LaboratorioProgramacionUno.Vista
             this.panel1.Size = new System.Drawing.Size(389, 272);
             this.panel1.TabIndex = 2;
             // 
-            // BtnEntrar
+            // BtnEntrarUs
             // 
-            this.BtnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BtnEntrarUs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEntrar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEntrar.Location = new System.Drawing.Point(153, 218);
-            this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(92, 33);
-            this.BtnEntrar.TabIndex = 4;
-            this.BtnEntrar.Text = "Entrar";
-            this.BtnEntrar.UseVisualStyleBackColor = true;
-            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
+            this.BtnEntrarUs.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEntrarUs.Location = new System.Drawing.Point(43, 221);
+            this.BtnEntrarUs.Name = "BtnEntrarUs";
+            this.BtnEntrarUs.Size = new System.Drawing.Size(136, 33);
+            this.BtnEntrarUs.TabIndex = 4;
+            this.BtnEntrarUs.Text = "Entrar User ";
+            this.BtnEntrarUs.UseVisualStyleBackColor = true;
+            this.BtnEntrarUs.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // TxtContraseña
             // 
@@ -112,6 +114,20 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtUsuario.Size = new System.Drawing.Size(166, 20);
             this.TxtUsuario.TabIndex = 2;
             // 
+            // BtnEntrarAd
+            // 
+            this.BtnEntrarAd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEntrarAd.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEntrarAd.Location = new System.Drawing.Point(208, 221);
+            this.BtnEntrarAd.Name = "BtnEntrarAd";
+            this.BtnEntrarAd.Size = new System.Drawing.Size(132, 33);
+            this.BtnEntrarAd.TabIndex = 5;
+            this.BtnEntrarAd.Text = "Entrar Admin";
+            this.BtnEntrarAd.UseVisualStyleBackColor = true;
+            this.BtnEntrarAd.Click += new System.EventHandler(this.BtnEntrarAd_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,8 +148,9 @@ namespace LaboratorioProgramacionUno.Vista
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Label LblPass;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BtnEntrar;
         private System.Windows.Forms.TextBox TxtContraseña;
         private System.Windows.Forms.TextBox TxtUsuario;
+        public System.Windows.Forms.Button BtnEntrarAd;
+        public System.Windows.Forms.Button BtnEntrarUs;
     }
 }

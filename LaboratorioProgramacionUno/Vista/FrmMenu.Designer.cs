@@ -51,6 +51,7 @@ namespace LaboratorioProgramacionUno
             this.BtnAdmin.TabIndex = 1;
             this.BtnAdmin.Text = "Administrador";
             this.BtnAdmin.UseVisualStyleBackColor = true;
+            this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
             // Form1
             // 
