@@ -90,6 +90,7 @@ namespace LaboratorioProgramacionUno.Vista
             this.BtnEntrar.TabIndex = 4;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = true;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // TxtContraseña
             // 

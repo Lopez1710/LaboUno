@@ -31,5 +31,10 @@ namespace LaboratorioProgramacionUno.Vista
         {
             Application.Exit();
         }
+
+        private void BtnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
