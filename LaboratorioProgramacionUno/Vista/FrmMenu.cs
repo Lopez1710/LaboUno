@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaboratorioProgramacionUno.Vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,23 @@ namespace LaboratorioProgramacionUno
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void BtnUsuario_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

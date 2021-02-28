@@ -41,6 +41,7 @@ namespace LaboratorioProgramacionUno
             this.BtnUsuario.TabIndex = 0;
             this.BtnUsuario.Text = "Usuario";
             this.BtnUsuario.UseVisualStyleBackColor = true;
+            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // BtnAdmin
             // 
@@ -55,11 +56,13 @@ namespace LaboratorioProgramacionUno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 209);
+            this.ClientSize = new System.Drawing.Size(448, 195);
             this.Controls.Add(this.BtnAdmin);
             this.Controls.Add(this.BtnUsuario);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
 
         }

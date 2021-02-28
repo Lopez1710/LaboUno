@@ -32,9 +32,9 @@ namespace LaboratorioProgramacionUno.Vista
             this.LblUsuario = new System.Windows.Forms.Label();
             this.LblPass = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.BtnEntrar = new System.Windows.Forms.Button();
+            this.TxtContraseña = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,29 @@ namespace LaboratorioProgramacionUno.Vista
             this.panel1.Size = new System.Drawing.Size(389, 272);
             this.panel1.TabIndex = 2;
             // 
+            // BtnEntrar
+            // 
+            this.BtnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEntrar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEntrar.Location = new System.Drawing.Point(153, 218);
+            this.BtnEntrar.Name = "BtnEntrar";
+            this.BtnEntrar.Size = new System.Drawing.Size(92, 33);
+            this.BtnEntrar.TabIndex = 4;
+            this.BtnEntrar.Text = "Entrar";
+            this.BtnEntrar.UseVisualStyleBackColor = true;
+            // 
+            // TxtContraseña
+            // 
+            this.TxtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtContraseña.Location = new System.Drawing.Point(174, 155);
+            this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.Size = new System.Drawing.Size(166, 20);
+            this.TxtContraseña.TabIndex = 3;
+            // 
             // TxtUsuario
             // 
             this.TxtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -88,29 +111,6 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtUsuario.Size = new System.Drawing.Size(166, 20);
             this.TxtUsuario.TabIndex = 2;
             // 
-            // TxtContraseña
-            // 
-            this.TxtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtContraseña.Location = new System.Drawing.Point(185, 155);
-            this.TxtContraseña.Name = "TxtContraseña";
-            this.TxtContraseña.Size = new System.Drawing.Size(155, 20);
-            this.TxtContraseña.TabIndex = 3;
-            // 
-            // BtnEntrar
-            // 
-            this.BtnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEntrar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEntrar.Location = new System.Drawing.Point(237, 220);
-            this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(92, 33);
-            this.BtnEntrar.TabIndex = 4;
-            this.BtnEntrar.Text = "Entrar";
-            this.BtnEntrar.UseVisualStyleBackColor = true;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +119,7 @@ namespace LaboratorioProgramacionUno.Vista
             this.Controls.Add(this.panel1);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

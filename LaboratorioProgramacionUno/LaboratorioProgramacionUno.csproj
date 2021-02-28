@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ClsAdmin.cs" />
+    <Compile Include="DAO\ClsUsuarios.cs" />
     <Compile Include="Negocio\ClsLogin.cs" />
     <Compile Include="Vista\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -88,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dominio\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
