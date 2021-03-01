@@ -48,6 +48,14 @@ namespace LaboratorioProgramacionUno.Vista
                 {
                     MessageBox.Show("Acceso Consedido");
                     FrmOperaciones frm = new FrmOperaciones();
+                    
+                frm.TxtIva.Enabled = false;
+                frm.TxtProduc.Enabled = false;
+                frm.LblUs.Text = TxtUsuario.Text;
+                frm.TxtProduc.Text = "Laptop";
+                frm.LblProducto.Text = frm.TxtProduc.Text;
+                frm.TxtIva.Text = "0.13";
+                    
                     frm.Show();
                     this.Hide();
                 }
@@ -74,6 +82,7 @@ namespace LaboratorioProgramacionUno.Vista
             {
                 MessageBox.Show("Acceso Consedido");
                 FrmOperaciones frm = new FrmOperaciones();
+                frm.LblUs.Text = TxtUsuario.Text;
                 frm.Show();
                 this.Hide();
             }

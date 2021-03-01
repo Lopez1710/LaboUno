@@ -79,18 +79,100 @@ namespace LaboratorioProgramacionUno.Vista
                 double p = t + r;
                 LblTSinDescuento.Text = p.ToString();
 
-                //////////////////////////////////////////////
 
-         
+                if (t <= 50)
+                {
+                    double f = t + r;
+                    LblTPagar.Text = f.ToString();
 
+                }
+                else if (t > 50 && t < 100)
+                {
+                    double resul = t * 0.05;
+                    double res = t - resul + r;
+                    LblTPagar.Text = res.ToString();
+                }
+                else if (t >= 100 && t < 101)
+                {
+                    double resul = t * 0.10;
+                    double res = (t + r) - resul;
+                    LblTPagar.Text = res.ToString();
+                }
+                else if (t >= 101 && t < 150)
+                {
+                    double resul = t * 0.20;
+                    double res = t - resul + r;
+                    LblTPagar.Text = res.ToString();
+                }
+                else if (t > 150)
+                {
+                    double resul = t * 0.50;
+                    double res = t - resul + r;
+                    LblTPagar.Text = res.ToString();
+
+                }
+                
             }
+            else
+            {
+                double a = Convert.ToDouble(TxtPrecio.Text);
+                double b = Convert.ToDouble(TxtCantidad.Text);
+                double t = a * b;
+                LblTIva.Text = t.ToString();
 
-        }     
+                double c = Convert.ToDouble(TxtPrecio.Text);
+                double r = t * (Convert.ToDouble(TxtIva.Text));
+                LblIvaAgre.Text = r.ToString();
+
+                double p = t + r;
+
+                LblTSinDescuento.Text = p.ToString();
+
+                if (t <= 50)
+                {
+                    double f = t + r;
+                    LblTPagar.Text = f.ToString();
+
+                }
+                else if (t > 50 && t < 100)
+                {
+                    double resul = t * 0.05;
+                    double res = t - resul + r;
+                    LblTPagar.Text = res.ToString();
+                }
+                else if (t >= 100 && t < 101)
+                {
+                    double resul = t * 0.10;
+                    double res = (t + r) - resul;
+                    LblTPagar.Text = res.ToString();
+                }
+                else if (t >= 101 && t < 150)
+                {
+                    double resul = t * 0.20;
+                    double res = t - resul + r;
+                    LblTPagar.Text = res.ToString();
+                }
+                else if (t > 150)
+                {
+                    double resul = t * 0.50;
+                    double res = t - resul + r;
+                    LblTPagar.Text = res.ToString();
+                }
+            }
+        }
+
+            
              
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            dataGridView1.Rows.Add("hola");
             
+        }
+
+        private void TxtProduc_TextChanged(object sender, EventArgs e)
+        {
+            LblProducto.Text = TxtProduc.Text;
         }
     }
 }

@@ -52,7 +52,6 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.TxtProduc = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,8 +59,6 @@ namespace LaboratorioProgramacionUno.Vista
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(49, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(778, 150);
@@ -155,7 +152,7 @@ namespace LaboratorioProgramacionUno.Vista
             this.LblTIva.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTIva.Location = new System.Drawing.Point(650, 313);
             this.LblTIva.Name = "LblTIva";
-            this.LblTIva.Size = new System.Drawing.Size(49, 16);
+            this.LblTIva.Size = new System.Drawing.Size(58, 23);
             this.LblTIva.TabIndex = 9;
             this.LblTIva.Click += new System.EventHandler(this.label9_Click);
             // 
@@ -163,9 +160,9 @@ namespace LaboratorioProgramacionUno.Vista
             // 
             this.LblIvaAgre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblIvaAgre.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIvaAgre.Location = new System.Drawing.Point(650, 345);
+            this.LblIvaAgre.Location = new System.Drawing.Point(650, 343);
             this.LblIvaAgre.Name = "LblIvaAgre";
-            this.LblIvaAgre.Size = new System.Drawing.Size(49, 13);
+            this.LblIvaAgre.Size = new System.Drawing.Size(56, 25);
             this.LblIvaAgre.TabIndex = 10;
             this.LblIvaAgre.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -173,27 +170,26 @@ namespace LaboratorioProgramacionUno.Vista
             // 
             this.LblTSinDescuento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblTSinDescuento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTSinDescuento.Location = new System.Drawing.Point(650, 375);
+            this.LblTSinDescuento.Location = new System.Drawing.Point(650, 373);
             this.LblTSinDescuento.Name = "LblTSinDescuento";
-            this.LblTSinDescuento.Size = new System.Drawing.Size(49, 13);
+            this.LblTSinDescuento.Size = new System.Drawing.Size(56, 23);
             this.LblTSinDescuento.TabIndex = 11;
             // 
             // LblTPagar
             // 
             this.LblTPagar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblTPagar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTPagar.Location = new System.Drawing.Point(650, 404);
+            this.LblTPagar.Location = new System.Drawing.Point(650, 402);
             this.LblTPagar.Name = "LblTPagar";
-            this.LblTPagar.Size = new System.Drawing.Size(49, 14);
+            this.LblTPagar.Size = new System.Drawing.Size(58, 25);
             this.LblTPagar.TabIndex = 12;
             // 
             // LblProducto
             // 
-            this.LblProducto.AutoSize = true;
             this.LblProducto.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProducto.Location = new System.Drawing.Point(650, 262);
+            this.LblProducto.Location = new System.Drawing.Point(625, 262);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(0, 20);
+            this.LblProducto.Size = new System.Drawing.Size(107, 29);
             this.LblProducto.TabIndex = 13;
             this.LblProducto.Click += new System.EventHandler(this.label13_Click);
             // 
@@ -274,11 +270,7 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtProduc.Name = "TxtProduc";
             this.TxtProduc.Size = new System.Drawing.Size(100, 20);
             this.TxtProduc.TabIndex = 22;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Datos";
-            this.Column1.Name = "Column1";
+            this.TxtProduc.TextChanged += new System.EventHandler(this.TxtProduc_TextChanged);
             // 
             // FrmOperaciones
             // 
@@ -335,16 +327,15 @@ namespace LaboratorioProgramacionUno.Vista
         private System.Windows.Forms.Label LblIvaAgre;
         private System.Windows.Forms.Label LblTSinDescuento;
         private System.Windows.Forms.Label LblTPagar;
-        private System.Windows.Forms.Label LblProducto;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label LblUs;
         private System.Windows.Forms.Button BtnCalc;
-        private System.Windows.Forms.TextBox TxtIva;
         private System.Windows.Forms.TextBox TxtCantidad;
         private System.Windows.Forms.TextBox TxtPrecio;
-        private System.Windows.Forms.TextBox TxtProduc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        public System.Windows.Forms.TextBox TxtIva;
+        public System.Windows.Forms.TextBox TxtProduc;
+        public System.Windows.Forms.Label LblUs;
+        public System.Windows.Forms.Label LblProducto;
     }
 }
