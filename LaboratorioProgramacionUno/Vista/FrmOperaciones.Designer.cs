@@ -35,9 +35,10 @@ namespace LaboratorioProgramacionUno.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1256, 649);
             this.Name = "FrmOperaciones";
-            this.Text = "FrmOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Operaciones";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmOperaciones_FormClosing);
             this.Load += new System.EventHandler(this.FrmOperaciones_Load);
             this.ResumeLayout(false);
