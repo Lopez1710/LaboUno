@@ -81,47 +81,7 @@ namespace LaboratorioProgramacionUno.Vista
 
                 //////////////////////////////////////////////
 
-                if (t <= 50)
-                {
-                    double f = t + r;
-                    LblTPagar.Text = f.ToString();
-
-                }
-                else if (t > 50 && t < 100)
-                {
-                    double resul = t * 0.05;
-                    double res = t - resul + r;
-                    LblTPagar.Text = res.ToString();
-                }
-                else if (t >= 100 && t < 101)
-                {
-                    double resul = t * 0.10;
-                    double res = (t + r) - resul;
-                    LblTPagar.Text = res.ToString();
-                }
-                else if (t >= 101 && t < 150)
-                {
-                    double resul = t * 0.20;
-                    double res = t - resul + r;
-                    LblTPagar.Text = res.ToString();
-                }
-                else if (t > 150)
-                {
-                    double resul = t * 0.50;
-                    double res = t - resul + r;
-                    LblTPagar.Text = res.ToString();
-                }
-            }
-
-
-
-
-
-        }
-
-       
-    }
-}
+         
 
             }
 
