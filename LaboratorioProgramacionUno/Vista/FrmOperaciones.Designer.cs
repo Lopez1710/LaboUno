@@ -52,16 +52,21 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.TxtProduc = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(49, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(778, 150);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -240,6 +245,7 @@ namespace LaboratorioProgramacionUno.Vista
             this.BtnCalc.TabIndex = 18;
             this.BtnCalc.Text = "Calcular";
             this.BtnCalc.UseVisualStyleBackColor = true;
+            this.BtnCalc.Click += new System.EventHandler(this.BtnCalc_Click);
             // 
             // TxtIva
             // 
@@ -268,6 +274,11 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtProduc.Name = "TxtProduc";
             this.TxtProduc.Size = new System.Drawing.Size(100, 20);
             this.TxtProduc.TabIndex = 22;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Datos";
+            this.Column1.Name = "Column1";
             // 
             // FrmOperaciones
             // 
@@ -334,5 +345,6 @@ namespace LaboratorioProgramacionUno.Vista
         private System.Windows.Forms.TextBox TxtCantidad;
         private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.TextBox TxtProduc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

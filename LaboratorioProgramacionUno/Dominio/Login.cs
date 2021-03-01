@@ -13,5 +13,9 @@ namespace LaboratorioProgramacionUno.Dominio
 
         public string User { get => user; set => user = value; }
         public string Pass { get => pass; set => pass = value; }
+       
+
+       
+
     }
 }

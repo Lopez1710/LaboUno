@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LaboratorioProgramacionUno.Dominio;
+using LaboratorioProgramacionUno.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace LaboratorioProgramacionUno.Vista
 {
     public partial class FrmOperaciones : Form
     {
+        
+
         public FrmOperaciones()
         {
             InitializeComponent();
@@ -50,6 +54,39 @@ namespace LaboratorioProgramacionUno.Vista
         private void label16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCalc_Click(object sender, EventArgs e)
+        {
+            string lb = TxtProduc.Text;
+            LblProducto.Text = lb;
+            string iv = TxtIva.Text;
+
+            if (TxtIva.Text == "" || TxtIva.Text == null)
+            {
+                double a = Convert.ToDouble(TxtPrecio.Text);
+                double b = Convert.ToDouble(TxtCantidad.Text);
+                double t = a * b;
+                LblTIva.Text = t.ToString();
+
+
+                double c = Convert.ToDouble(TxtPrecio.Text);
+                double r = t * 0.13;
+                LblIvaAgre.Text = r.ToString();
+
+
+
+                double p = t + r;
+                LblTSinDescuento.Text = p.ToString();
+
+            }
+
+        }     
+             
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
