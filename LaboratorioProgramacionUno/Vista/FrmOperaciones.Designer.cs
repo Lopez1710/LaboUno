@@ -52,6 +52,7 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.TxtProduc = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,8 @@ namespace LaboratorioProgramacionUno.Vista
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(49, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(778, 150);
@@ -272,6 +275,11 @@ namespace LaboratorioProgramacionUno.Vista
             this.TxtProduc.TabIndex = 22;
             this.TxtProduc.TextChanged += new System.EventHandler(this.TxtProduc_TextChanged);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ACCION";
+            this.Column1.Name = "Column1";
+            // 
             // FrmOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,5 +345,6 @@ namespace LaboratorioProgramacionUno.Vista
         public System.Windows.Forms.TextBox TxtProduc;
         public System.Windows.Forms.Label LblUs;
         public System.Windows.Forms.Label LblProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
